@@ -1,17 +1,17 @@
 const express = require('express');
-const ItemController = require('./item.controller');
+const itemController = require('./item.controller');
 const router = express.Router();
 
 // GET ALL api/items
-router.get('/', ItemController.getAll);
+router.get('/', itemController.getAll);
 
 // GET ONE api/items/id
-router.get('/:id', ItemController.getById);
+router.get('/:id', itemController.getById);
 
 // POST api/items
-router.post('/', ItemController.create);
+router.post('/', itemController.create);
 
 // DELETE api/items/id
-router.delete('/:id', ItemController.delete);
+router.delete('/:id', itemController.delete);
 
 module.exports = router;

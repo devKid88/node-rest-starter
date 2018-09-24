@@ -6,14 +6,14 @@ exports.getAll = (req, res, next) => {
     .catch(err => next(err));
 }
 
-exports.create = (req, res, next) => {
-  itemService.create(req.body)
+exports.getById = (req, res, next) => {
+  itemService.getById(req.params.id)
     .then(item => res.json(item))
     .catch(err => next(err));
 }
 
-exports.getById = (req, res, next) => {
-  itemService.getById(req.params.id)
+exports.create = (req, res, next) => {
+  itemService.create(req.body)
     .then(item => res.json(item))
     .catch(err => next(err));
 }
