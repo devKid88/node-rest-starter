@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "lint": "eslint"
   },
   "author": "Nemanja Marinkovic",
   "license": "MIT",
@@ -13,10 +14,14 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.1"
   },
   "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "nodemon": "^1.17.5"
   }
 }

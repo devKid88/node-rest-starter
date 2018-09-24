@@ -1,13 +1,14 @@
-const db = require('../../config/keys').mongoURI;
 const mongoose = require('mongoose');
+const db = require('../../config/keys').mongoURI;
 
 // Connect to mongo
 mongoose.connect(db)
-    .then(() => console.log('Conected'))
-    .catch(err => console.log(err));
+  .then(() => console.log('Conected'))
+  .catch(err => console.log(err));
+
 mongoose.Promise = global.Promise;
 
 module.exports = {
-    // User: require('../users/user.model')
-    Item: require('../item/item.model')
+  // User: require('../users/user.model'),
+  // Item: require('../item/item.model'),
 };
