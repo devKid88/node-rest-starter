@@ -28,12 +28,12 @@ exports.authenticate = async ({ username, password }) => {
   const user = await UserModel.findOne({ username });
 
   if (user && bcrypt.compareSync(password, user.hash)) {
-    const { hash, ...userWithouthHash } = user.toObject();
+    const { hash, ...userWithoutHash } = user.toObject();
     const token = jwt.sign({
       sub: user.id,
-    }, keys.secred);
+    }, keys.secret);
     return {
-      ...userWithouthHash,
+      ...userWithoutHash,
       token,
     };
   }
